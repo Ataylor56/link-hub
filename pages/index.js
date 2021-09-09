@@ -18,9 +18,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+          <p className={styles.description}>
+              <code className={styles.code}>What's kickin' Chicken?</code>
+          </p>
+
           <h1 className={styles.title}>
               Welcome to my link-hub!
           </h1>
+
           <Image className={styles.profilePic} src={profilePic} width={200} height={200}/>
           <div className={styles.contact}>
               <a href={'tel://4023662478'} className={styles.contactCard}>
