@@ -19,7 +19,7 @@ export default function Home() {
 
       <main className={styles.main}>
           <p className={styles.description}>
-              <code className={styles.code}>What's kickin' Chicken?</code>
+              <code className={styles.code}>Whats kickin Chicken?</code>
           </p>
 
           <h1 className={styles.title}>
