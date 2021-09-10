@@ -7,7 +7,7 @@ class Header extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            saying: "What is Sup Doc?🥕"
+            saying: ""
         };
         this.getRandomSaying = this.getRandomSaying.bind(this);
     }
@@ -19,10 +19,9 @@ class Header extends React.Component{
 
     getRandomSaying() {
         const num = Math.floor(Math.random()*10);
-        console.log(num);
         let saying = ""
         switch (num) {
-            case 0: {saying = "Greetings Friend 🤓"} break;
+            case 0: {saying = "What is Sup Doc? 🥕"} break;
             case 1: {saying = "Carne a-suh dood? 🥩"} break;
             case 2: {saying = "What is kickin my Chicken? 🐔"} break;
             case 3: {saying = "Sup 😏"} break;
