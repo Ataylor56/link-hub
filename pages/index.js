@@ -3,6 +3,7 @@ import Header from "../components/header";
 import Contact from "../components/contact";
 import LinkCards from "../components/link-cards";
 
+
 export default function Home() {
   return (
     <div className="bg-gray-700 bg-gradient-to-bl h-screen overflow-y-scroll overscroll-none flex flex-col justify-items-start pb-16 pt-14">
