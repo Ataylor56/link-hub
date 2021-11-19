@@ -9,32 +9,14 @@ class Header extends React.Component{
         this.state = {
             saying: ""
         };
-        this.getRandomSaying = this.getRandomSaying.bind(this);
     }
 
-    componentDidMount() {
-        this.getRandomSaying();
+    async componentDidMount() {
+        const res = await fetch(`https://austintaylor.dev/api/randomSaying`)
+        const data = await res.json()
+        this.setState({saying: data.saying})
     }
 
-
-    getRandomSaying() {
-        const num = Math.floor(Math.random()*10);
-        let saying = ""
-        switch (num) {
-            case 0: {saying = "What is Sup Doc? 🥕"} break;
-            case 1: {saying = "Carne a-suh dood? 🥩"} break;
-            case 2: {saying = "What is kickin my Chicken? 🐔"} break;
-            case 3: {saying = "Sup 😏"} break;
-            case 4: {saying = "What it do buckaroo? 🤠"} break;
-            case 5: {saying = "What is ⬆️ 🐕"} break;
-            case 6: {saying = "What's poppin 🍾"} break;
-            case 7: {saying = "Salutations brotherin 👽"} break;
-            case 8: {saying = "Hey, hi, how ya durrin? - Weezy F Baby"} break;
-            case 9: {saying = "Greetings Mortal 🤖"} break;
-            default: {saying = "What is Sup Doc? 🥕"} break;
-        }
-        this.setState({saying: saying});
-    }
     render () {
         return (
             <div className={"flex-col flex p-10"}>
