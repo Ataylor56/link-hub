@@ -1,7 +1,6 @@
 import profilePic from '../public/sdsu.JPG'
 import Image from "next/image";
 import React from "react";
-import cors from "cors";
 
 class Header extends React.Component{
 
