@@ -12,9 +12,13 @@ class Header extends React.Component{
     }
 
     async componentDidMount() {
-        const res = await fetch(`https://austintaylor.dev/api/randomSaying`)
-        const data = await res.json()
-        this.setState({saying: data.saying})
+        await fetch(`https://austintaylor.dev/api/randomSaying`)
+            .then(r => r.json())
+            .then(r => {
+                this.setState({
+                    saying: r.saying
+                })
+            })
     }
 
     render () {
