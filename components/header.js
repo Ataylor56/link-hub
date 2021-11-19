@@ -1,6 +1,7 @@
 import profilePic from '../public/sdsu.JPG'
 import Image from "next/image";
 import React from "react";
+import cors from "cors";
 
 class Header extends React.Component{
 
@@ -12,7 +13,9 @@ class Header extends React.Component{
     }
 
     async componentDidMount() {
-        await fetch(`https://austintaylor.dev/api/randomSaying`)
+        await fetch(`https://austintaylor.dev/api/randomSaying`, {
+            mode: "no-cors",
+        })
             .then(r => r.json())
             .then(r => {
                 this.setState({
