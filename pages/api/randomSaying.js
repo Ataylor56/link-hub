@@ -1,3 +1,10 @@
+import Cors from 'cors'
+import initMiddleware from "../../lib/init-middleware";
+
+const cors = Cors({
+    methods: ['GET','POST']
+})
+
 export default function (req, res) {
     switch (req.method) {
         case 'GET':
@@ -6,7 +13,9 @@ export default function (req, res) {
             return res.status(405).end(`Method ${req.method} is not allowed`)
     }
 
-    function getSaying() {
+    async function getSaying() {
+        await initMiddleware(req, res, cors)
+
         const num = Math.floor(Math.random() * 10)
         let saying = ""
         switch (num) {
