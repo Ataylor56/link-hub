@@ -25,7 +25,7 @@ export default function LinkCards() {
 
     const linkCards = info.content.map( media => {
         return (
-        <div className="pt-5 space-y-2.5 overscroll-none">
+        <div key={media.media} className="pt-5 space-y-2.5 overscroll-none">
             <a href={media.link} className={"flex flex-row bg-blue-light text-gray-dark max-w-screen-sm mx-auto p-2 rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:bg-blue-dark hover:text-blue-light"} >
                 <div className={"flex flex-col"}>
                     <FontAwesomeIcon icon={media.icon} size='3x' />

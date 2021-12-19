@@ -17,7 +17,7 @@ export default function Home() {
         <div className={'relative w-full h-full flex flex-col items-center'}>
             <div className={'mt-20 border-8 pl-52 pr-52 pt-32 pb-32'}>
                 <h1 className={"text-gray-dark text-4xl font-semibold text-center text-black"}>
-                    Welcome to my 'website'
+                    Welcome to my &apos;website&apos;
                 </h1>
                 <h2 className={'mt-10 text-xl font-semibold text-center'}>
                     Excuse my mess - this is currently under construction 🔨

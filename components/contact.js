@@ -19,7 +19,7 @@ export default function Contact() {
     }
     const contactCards =  info.content.map( media => {
         return (
-            <div className={"text-center pl-5 pr-5 pt-2 pb-1 text-gray-dark bg-blue-light rounded-full hover:bg-blue-dark hover:text-blue-light"}>
+            <div key={media.action} className={"text-center pl-5 pr-5 pt-2 pb-1 text-gray-dark bg-blue-light rounded-full hover:bg-blue-dark hover:text-blue-light"}>
                 <a href={media.link} >
                     <FontAwesomeIcon icon={media.icon} size='3x' />
                     <p className={'text-xl font-semibold'}>{media.action}</p>
