@@ -6,8 +6,8 @@ function MyApp({ Component, pageProps }) {
   const source = `https://www.googletagmanager.com/gtag/js?id=${analyticsId}`
   return <>
 
-    <Script strategy="lazyOnload" src={source} />
-    <Script strategy="lazyOnload">
+    <Script id='GoogleAnalytics' strategy="lazyOnload" src={source} />
+    <Script id ='GoogleAnalytics' strategy="lazyOnload">
       {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
