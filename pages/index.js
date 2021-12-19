@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {DiamondSunset, EndlessConstellation} from "../public/svgs";
+import {DiamondSunset} from "../public/svgs";
 import NavBar from "../components/nav_bar";
 
 export default function Home() {
