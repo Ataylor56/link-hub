@@ -6,10 +6,12 @@ function Header(){
     const saying = getSaying()
     return(
         <div className={"flex-col flex p-10"}>
-            <code className={"bg-gray-50 p-2 max-w-sm mx-auto text-center"}>{saying ? saying : Loading() }</code>
-            <p className={"pt-3 pb-3 text-white font-bold mx-auto text-5xl text-center"}>Welcome to my link-hub!</p>
-            <div className={"pt-10 pl-10 pr-10 max-w-sm mx-auto"}>
-                <Image alt={"Me coaching At South Dakota State"} className={"grayscale overflow-hidden rounded-full shadow-md hover:grayscale-0"}
+            <code className={"bg-gray-light bg-opacity-60 text-blue-light p-2 max-w-sm mx-auto text-center"}>{saying ? saying : Loading() }</code>
+
+            <p className={"text-blue-light mt-4 pb-3 text-white font-bold mx-auto text-5xl text-center"}>Welcome to my link-hub!</p>
+
+            <div className={"mt-5 pl-10 pr-10 max-w-sm mx-auto"}>
+                <Image alt={"Me coaching At South Dakota State"} className={"grayscale overflow-hidden rounded-full shadow-md hover:grayscale-0 hover:animate-none animate-wiggle"}
                        src={profilePic}/>
             </div>
         </div>

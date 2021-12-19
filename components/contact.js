@@ -1,23 +1,36 @@
-import Image from "next/image";
-import wPhone from "../public/phone-white.png"
-import wText from "../public/text-white.png"
+import {faPhone, faCommentDots} from "@fortawesome/free-solid-svg-icons"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 export default function Contact() {
+    const info = {
+        content: [
+            {
+                action: 'Call',
+                icon: faPhone,
+                link: 'tel://4023662478',
+            },
+            {
+                action : 'Text',
+                icon: faCommentDots,
+                link: 'sms://4023662478',
+            },
+        ]
+    }
+    const contactCards =  info.content.map( media => {
+        return (
+            <div className={"text-center pl-5 pr-5 pt-2 pb-1 text-gray-dark bg-blue-light rounded-full hover:bg-blue-dark hover:text-blue-light"}>
+                <a href={media.link} >
+                    <FontAwesomeIcon icon={media.icon} size='3x' />
+                    <p className={'text-xl font-semibold'}>{media.action}</p>
+                </a>
+            </div>
+        )
+    } );
+
     return (
-        <div className={"flex flex-row mx-auto"}>
-
-            <a href={"tel://4023662478"} className={"text-center rounded-full p-2 hover:bg-blue-900"}>
-                <Image src={wPhone} width={50} height={50}/>
-                <p className={"text-white"}>Call</p>
-            </a>
-
-            <div className={"p-5"}/>
-
-            <a href={"sms://4023662478"} className={"text-center rounded-full p-2 hover:bg-blue-900"}>
-                <Image src={wText} width={50} height={50}/>
-                <p className={"text-white"}>Text</p>
-            </a>
-
+        <div className={"flex flex-row justify-center p-1 gap-5"}>
+            {contactCards}
         </div>
     )
 }
