@@ -14,15 +14,13 @@ export default function Home() {
 
         <DiamondSunset className={"absolute w-screen h-screen overscroll-none overscroll-y-none"}/>
 
-        <div className={'relative w-full h-full flex flex-col items-center'}>
-            <div className={'mt-20 border-8 pl-52 pr-52 pt-32 pb-32'}>
-                <h1 className={"text-gray-dark text-4xl font-semibold text-center text-black"}>
+        <div className={'relative w-full h-full flex flex-col pl-3 pr-3 text-center'}>
+                <h1 className={"mt-20 text-gray-dark text-4xl font-semibold"}>
                     Welcome to my &apos;website&apos;
                 </h1>
-                <h2 className={'mt-10 text-xl font-semibold text-center'}>
+                <h2 className={'mt-10 text-xl font-semibold'}>
                     Excuse my mess - this is currently under construction 🔨
                 </h2>
-            </div>
         </div>
 
     </div>
